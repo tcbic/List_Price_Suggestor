@@ -33,22 +33,7 @@ column1 = dbc.Col(
                 {'label': 'Poor', 'value': 5}
             ],
             value=1,
-            className='mb-3',
-        ),
-        dcc.Markdown('##### ** Item Category **'),
-        dcc.Dropdown(
-            id = 'main-category',
-            options = [
-                {'label': 'Women', 'value': 1},
-                {'label': 'Beauty', 'value': 3},
-                {'label': 'Kids', 'value': 2},
-                {'label': 'Electronics', 'value': 4},
-                {'label': 'Men', 'value': 6},
-                {'label': 'Home', 'value': 7},
-                {'label': 'Vintage & Collectibles', 'value': 5},
-                {'label': 'Sports & Outdoors', 'value': 8}
-            ],
-            value=4,
+            labelStyle = {'margin-right': '20px'},
             className='mb-3',
         ),
         dcc.Markdown('##### ** Brand Name **'),
@@ -155,6 +140,22 @@ column1 = dbc.Col(
                 {'label': 'Mossimo', 'value': 98},
                 {'label': 'ALEX AND ANI', 'value': 99},
                 {'label': 'Clinique', 'value': 100}
+            ],
+            value=4,
+            className='mb-3',
+        ),
+        dcc.Markdown('##### ** Item Category **'),
+        dcc.Dropdown(
+            id = 'main-category',
+            options = [
+                {'label': 'Women', 'value': 1},
+                {'label': 'Beauty', 'value': 3},
+                {'label': 'Kids', 'value': 2},
+                {'label': 'Electronics', 'value': 4},
+                {'label': 'Men', 'value': 6},
+                {'label': 'Home', 'value': 7},
+                {'label': 'Vintage & Collectibles', 'value': 5},
+                {'label': 'Sports & Outdoors', 'value': 8}
             ],
             value=4,
             className='mb-3',
@@ -468,19 +469,18 @@ layout = dbc.Row([column1])
 @app.callback(
     Output('prediction-content', 'children'),
     [Input('item-condition', 'value'), 
-    Input('main-category', 'value'), 
-    Input('brand-name', 'value'),
+    Input('brand-name', 'value'), 
+    Input('main-category', 'value'),
     Input('sub-category', 'value'),
     Input('shipping', 'value')])
 
 def predict(item_condition, brand_name, main_category, sub_category, shipping):
     df = pd.DataFrame(
-        columns=['item_condition', 'brand_name', 'main_category',
-        'sub_category', 'shipping'],
+        columns=['item_condition', 'brand_name', 'main_category', 'sub_category', 'shipping'],
         data=[[item_condition, brand_name, main_category, sub_category, shipping]]
     )
 
-    pipeline = load('notebooks/pipeline_a.joblib')
+    pipeline = load('notebooks/pipeline.joblib')
     y_pred_log = pipeline.predict(df)
     y_pred = np.expm1(y_pred_log)[0]
     return dcc.Markdown(f'#### ${y_pred:.2f} dollars')

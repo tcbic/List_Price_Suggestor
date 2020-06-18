@@ -20,8 +20,8 @@ navbar = dbc.NavbarSimple(
     ],
     sticky='top',
     color='primary', 
-    light=True, 
-    dark=False
+    light=False, 
+    dark=True
 )
 
 # Footer docs:

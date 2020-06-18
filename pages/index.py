@@ -26,12 +26,7 @@ column1 = dbc.Col(
         ),
         dcc.Markdown(
             """
-            #### Don't sell yourself short. Literally.
-            """,
-        className='mb-4'),
-        dcc.Markdown(
-            """
-            ##### ✅ Gain insights into what sells.
+            ##### ✅ Gain insights into the top selling brands.
             """,
         className='mb-3'),
         dcc.Markdown(
@@ -41,10 +36,10 @@ column1 = dbc.Col(
         className='mb-3'),
         dcc.Markdown(
             """
-            ##### ✅ Maximize sales price and make more money.
+            ##### ✅ Maximize sales price to make more money.
             """,
         className='mb-4'),
-        dcc.Link(dbc.Button('Get Started', color='success'), href='/predictions')
+        dcc.Link(dbc.Button('Get Started Here', color='success'), href='/predictions')
     ],
     align="center",
 )
