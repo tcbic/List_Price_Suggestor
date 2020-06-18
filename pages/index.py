@@ -13,22 +13,40 @@ from app import app
 # https://dash-bootstrap-components.opensource.faculty.ai/l/components/layout
 column1 = dbc.Col(
     [
+        dcc.Markdown(className='mb-5'),
         dcc.Markdown(
             """
-        
-            ## Your Value Proposition
-
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
-
-            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
-
-            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
-
+            ## **Calling all Mercari sellers.**
+            """,
+        ), 
+        dcc.Markdown(
             """
+            #### Small details can mean substantial differences in sales price.
+            """,
         ),
-        dcc.Link(dbc.Button('Your Call To Action', color='primary'), href='/predictions')
+        dcc.Markdown(
+            """
+            #### Don't sell yourself short. Literally.
+            """,
+        className='mb-4'),
+        dcc.Markdown(
+            """
+            ##### ✅ Gain insights into what sells.
+            """,
+        className='mb-3'),
+        dcc.Markdown(
+            """
+            ##### ✅ Get price suggestions for how much to list an item for.
+            """,
+        className='mb-3'),
+        dcc.Markdown(
+            """
+            ##### ✅ Maximize sales price and make more money.
+            """,
+        className='mb-4'),
+        dcc.Link(dbc.Button('Get Started', color='success'), href='/predictions')
     ],
-    md=4,
+    align="center",
 )
 
 gapminder = px.data.gapminder()
