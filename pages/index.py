@@ -16,27 +16,27 @@ column1 = dbc.Col(
         dcc.Markdown(className='mb-5'),
         dcc.Markdown(
             """
-            ## **Calling all Mercari sellers.**
+            ## **The specifc styles within a given brand mean something.**
             """,
         ), 
         dcc.Markdown(
             """
-            #### Small details can mean substantial differences in sales price.
+            #### Not just in terms of looks, but also sales price.
             """,
         ),
         dcc.Markdown(
             """
-            ##### ✅ Gain insights into the top selling brands.
+            ##### lululemon athletica has become a mainstream athletic apparel brand.
             """,
         className='mb-3'),
         dcc.Markdown(
             """
-            ##### ✅ Get price suggestions for how much to list an item for.
+            ##### This app aims to offer list price suggestions for some of their most popular men's styles.
             """,
         className='mb-3'),
         dcc.Markdown(
             """
-            ##### ✅ Maximize sales price to make more money.
+            ##### All list price suggestions assume that the item is in excellent pre-owned condition and will be sold on eBay.
             """,
         className='mb-4'),
         dcc.Link(dbc.Button('Get Started Here', color='success'), href='/predictions')

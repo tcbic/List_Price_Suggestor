@@ -18,7 +18,7 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ### Select the features below based on the item intended for listing.
+            #### Select the features below based on the item intended for listing.
 
             """,
         className='mb-4'),
@@ -64,7 +64,7 @@ column1 = dbc.Col(
             value=4,
             className='mb-3',
         ),
-        dcc.Markdown('##### ** Current Season **'),
+        dcc.Markdown('##### ** Current Selling Season **'),
         dcc.Dropdown(
             id = 'season',
             options = [
