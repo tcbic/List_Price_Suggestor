@@ -101,8 +101,8 @@ def predict(size, style, item_specifics, season):
         data=[[size, style, item_specifics, season]]
     )
 
-    pipeline = load('notebooks/pipeline_a.joblib')
+    pipeline = load('assets/pipeline_a.joblib')
     y_pred = pipeline.predict(df)[0]
     # y_pred_log = pipeline.predict(df)
     # y_pred = np.expm1(y_pred_log)[0]
-    return dcc.Markdown(f'##### ${y_pred:.2f} dollars')
+    return f'${y_pred:.2f} dollars'
