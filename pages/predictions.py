@@ -26,11 +26,11 @@ column1 = dbc.Col(
         dcc.RadioItems(
             id = 'size',
             options = [
-                {'label': 'S', 'value': 1},
-                {'label': 'M', 'value': 5},
+                {'label': 'S', 'value': 4},
+                {'label': 'M', 'value': 1},
                 {'label': 'L', 'value': 2},
                 {'label': 'XL', 'value': 3},
-                {'label': 'XXL', 'value': 4}
+                {'label': 'XXL', 'value': 5}
             ],
             value=1,
             labelStyle = {'margin-right': '20px'},
@@ -41,12 +41,12 @@ column1 = dbc.Col(
             id = 'style',
             options = [
                 {'label': 'Metal Vent Tech Shirt', 'value': 2},
-                {'label': 'Metal Vent Tech Polo', 'value': 6},
-                {'label': 'Metal Vent Tech Tank Top', 'value': 5},
-                {'label': 'Metal Vent Tech 1/2 Zip', 'value': 7},
-                {'label': 'T.H.E. Short', 'value': 4},
-                {'label': 'Surge Short', 'value': 1},
-                {'label': 'Pace Breaker Short', 'value': 3}
+                {'label': 'Metal Vent Tech Polo', 'value': 7},
+                {'label': 'Metal Vent Tech Tank Top', 'value': 6},
+                {'label': 'Metal Vent Tech 1/2 Zip', 'value': 5},
+                {'label': 'T.H.E. Short', 'value': 3},
+                {'label': 'Surge Short', 'value': 4},
+                {'label': 'Pace Breaker Short', 'value': 1}
             ],
             value=4,
             className='mb-3',
@@ -55,8 +55,8 @@ column1 = dbc.Col(
         dcc.Dropdown(
             id = 'item-specifics',
             options = [
-                {'label': 'Linerless', 'value': 4},
-                {'label': 'Lined', 'value': 1},
+                {'label': 'Linerless', 'value': 1},
+                {'label': 'Lined', 'value': 4},
                 {'label': 'Long Sleeve', 'value': 3},
                 {'label': 'Short Sleeve', 'value': 2},
                 {'label': 'Sleeveless', 'value': 5}
@@ -69,9 +69,9 @@ column1 = dbc.Col(
             id = 'season',
             options = [
                 {'label': 'Fall', 'value': 2},
-                {'label': 'Summer', 'value': 3},
-                {'label': 'Winter', 'value': 4},
-                {'label': 'Spring', 'value': 1}
+                {'label': 'Summer', 'value': 4},
+                {'label': 'Winter', 'value': 1},
+                {'label': 'Spring', 'value': 3}
             ],
             value=4,
             className='mb-3',
@@ -101,7 +101,7 @@ def predict(size, style, item_specifics, season):
         data=[[size, style, item_specifics, season]]
     )
 
-    pipeline = load('notebooks/pipeline.joblib')
+    pipeline = load('notebooks/pipeline_a.joblib')
     y_pred = pipeline.predict(df)[0]
     # y_pred_log = pipeline.predict(df)
     # y_pred = np.expm1(y_pred_log)[0]
