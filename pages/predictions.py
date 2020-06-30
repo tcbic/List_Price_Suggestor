@@ -102,7 +102,7 @@ def predict(size, style, item_specifics, season):
         data=[[size, style, item_specifics, season]]
     )
 
-    pipeline = load('notebooks/pipeline_b.joblib')
+    pipeline = load('assets/pipeline_b.joblib')
     y_pred = pipeline.predict(df)[0]
     # y_pred_log = pipeline.predict(df)
     # y_pred = np.expm1(y_pred_log)[0]
