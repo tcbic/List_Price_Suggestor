@@ -18,7 +18,7 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            #### Select the features below based on the item intended for listing.
+            ##### Select the features below based on the item intended for listing.
 
             """,
         className='mb-4'),
@@ -65,15 +65,16 @@ column1 = dbc.Col(
             className='mb-3',
         ),
         dcc.Markdown('##### ** Current Selling Season **'),
-        dcc.Dropdown(
+        dcc.RadioItems(
             id = 'season',
             options = [
-                {'label': 'Fall', 'value': 2},
                 {'label': 'Summer', 'value': 4},
+                {'label': 'Fall', 'value': 2},
                 {'label': 'Winter', 'value': 1},
                 {'label': 'Spring', 'value': 3}
             ],
-            value=4,
+            value=1,
+            labelStyle = {'margin-right': '20px'},
             className='mb-3',
         ),
         dcc.Markdown('##### ** The suggested list price is: **', className='mb-2'), html.Div( id='prediction-content')
@@ -101,7 +102,7 @@ def predict(size, style, item_specifics, season):
         data=[[size, style, item_specifics, season]]
     )
 
-    pipeline = load('assets/pipeline_a.joblib')
+    pipeline = load('notebooks/pipeline_b.joblib')
     y_pred = pipeline.predict(df)[0]
     # y_pred_log = pipeline.predict(df)
     # y_pred = np.expm1(y_pred_log)[0]
