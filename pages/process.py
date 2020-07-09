@@ -32,7 +32,7 @@ row1 = html.Div([
         html.H5("Is this a regression or classification problem?", style={'font-style':'italic'}),
         html.P('This is a regression problem given that price, a continuous number, is being predicted. In a regression problem, we are most often predicting "How much/How many?"'),
         html.H5("How is the target distributed?", style={'font-style':'italic'}),
-        # html.Img(src="assets/ebay_target_distribution.PNG", className="img-fluid", width="400", height="244"),
+        html.Img(src="assets/lulu_target_distribution.PNG", className="img-fluid", width="400", height="244"),
         html.P("Looking at the plot above, we see that the target mostly follows a normal distribution."),
         html.H5("What metric is used to evaluate the performance of the model?", style={'font-style':'italic'}),
         html.P("Mean Absolute Error is used to evaluate the model. MAE explains a model's performance in terms of answering how far off a prediction is on average."),
@@ -64,10 +64,10 @@ row2 = html.Div([
         html.H5("Begin with a Baseline Model", style={'font-style':'italic'}),
         html.P("The mean of the target variable, price, is approximately $42.90. I used the mean to create a baseline model. The primary purpose of creating a baseline is to establish a starting point to improve upon."),
         html.P("If we listed each item for $42.90, we would be off by $4.76 on average."),
-        html.H5("Selected Model", style={'font-style':'italic'}),
+        html.H5("Selecting a Model", style={'font-style':'italic'}),
         html.P("To optimize model performance, I used ordinal encoding, cross-validation and randomized search (RandomizedSearchCV). Using 3-fold cross validation, the most optimal performing model is:"),
         html.H6("Random Forest Regressor with the following hyperparameters: max_depth = 10, max_features = .64621, n_estimators = 81 and random_state = 42"),
-        html.P("This model has a test MAE of $4.51."),
+        html.P("This model has a test MAE of $4.51. This is an improvement on the baseline by 25 cents."),
         html.P("Note: A random forest model is an example of a tree model; more specifically, a tree ensemble model.")
 
     ])
