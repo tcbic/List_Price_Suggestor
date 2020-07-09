@@ -32,7 +32,7 @@ row1 = html.Div([
         html.H5("Is this a regression or classification problem?", style={'font-style':'italic'}),
         html.P("This is a regression problem given that price, a continuous  is being predicted."),
         html.H5("How is the target distributed?", style={'font-style':'italic'}),
-        html.Img(src="assets/ebay_target_distribution.PNG", className="img-fluid"),
+        html.Img(src="assets/target_distribution.PNG", className="img-fluid"),
         html.H5("What metric is used to evaluate the performance of the model?", style={'font-style':'italic'}),
         html.P("Mean Absolute Error is used to evaluate the model. MAE explains a model's performance in terms of answering how far off a prediction is on average."),
         html.H5("What is the size of the train and test set?", style={'font-style':'italic'}),
