@@ -24,7 +24,7 @@ from app import app
 
 
 row1 = html.Div([
-    html.H4("Defining the Machine Learning Problem"),
+    html.H4("Defining the Machine Learning Problem", style={'text-decoration':'underline'}),
     html.Br(),
     html.Div([
         html.H5("What feature in the dataset was used as the target?", style={'font-style':'italic'}),
@@ -45,11 +45,27 @@ row1 = html.Div([
 row2 = html.Div([
     html.Br(),
     html.Div([
-        html.H4("Exploring the Data Cleaning Process"),
-        html.P("Details will go here."),
+        html.H4("Exploring the Data", style={'text-decoration':'underline'}),
         html.Br(),
-        html.H4("Explaining Model Selection and Model Performance"),
-        html.P("Details will go here.")
+        html.H5("About the Data", style={'font-style':'italic'}),
+        html.P('The dataset used for modeling is data collected from "thisjourneybus" eBay store. It includes sales from Summer (June) 2017 to Summer (June) 2018.'),
+        html.H5("Data Cleaning", style={'font-style':'italic'}),
+        html.P("A subset of the dataset was created to include only Men's lululemon athletica branded items that sold as a fixed listing format."),
+        html.H5("Data Engineering", style={'font-style':'italic'}),
+        html.P("I chose to engineer a feature from sale date for the purpose of categorizing items based on the season they sold. Each item fell into one of the four seasons: Summer, Fall, Winter or Spring."),
+        html.H6("The final features included in the dataset used to train the model are:"),
+        html.P("size - the size of the item sold"),
+        html.P("style - the name of the specific lululemon athletica style"),
+        html.P("item_specifcs - a descriptor of the item sold"),
+        html.P("season - the season the item sold (i.e. Fall)"),
+        html.Br(),
+        html.H4("Explaining Model Selection and Model Performance", style={'text-decoration':'underline'}),
+        html.Br(),
+        html.P("To optimize model performance, I used Cross-Validation, RandomizedSearch and Ordinal Encoding. Through the use of these techniques, the best performing model is:"),
+        html.H6("Random Forest Regressor with the following hyperparameters: max_depth = 10, max_features = .64621, n_estimators = 81 and random_state = 42"),
+        html.P("This model has a test MAE of $4.51."),
+        html.P("Note: A random forest model is an example of a tree model; more specifically, a tree ensemble model.")
+
     ])
 ])
 

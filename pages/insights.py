@@ -23,27 +23,20 @@ from app import app
 # )
 
 row1 = html.Div([
-    html.H4("By interpreting the model, we can reveal important insights."),
-    html.Br()
+    html.H4("Using Visualizations to Interpret Model Insights", style={'text-decoration':'underline'}),
+    html.Br(),
+    html.Div([
+        html.H5("Permutation Importance", style={'font-style':'italic'}),
+        # html.Img(src="assets/ebay_target_distribution.PNG", className="img-fluid"),
+        html.P("Image, what it does and explanation specifc to model."),
+        html.H5("Partial Dependence Plot", style={'font-style':'italic'}),
+        # html.Img(src="assets/ebay_target_distribution.PNG", className="img-fluid"),
+        html.P("Image, what it does and explanation specifc to model."),
+        html.H5("Shapley Values Plot", style={'font-style':'italic'}),
+        # html.Img(src="assets/ebay_target_distribution.PNG", className="img-fluid"),
+        html.P("Image, what it does and explanation specifc to model.")
+    ])
 ])
-
-# row1 = html.Div([
-#     html.H4("By interpreting the model, we can reveal important insights."),
-#     html.Br(),
-#     html.Div([
-#         html.H5("What feature in the dataset was used as the target?", style={'font-style':'italic'}),
-#         html.P("Price was used as the target variable."),
-#         html.H5("Is this a regression or classification problem?", style={'font-style':'italic'}),
-#         html.P("This is a regression problem given that price, a continuous  is being predicted."),
-#         html.H5("How is the target distributed?", style={'font-style':'italic'}),
-#         # html.Img(src="assets/ebay_target_distribution.PNG", className="img-fluid"),
-#         html.H5("What metric is used to evaluate the performance of the model?", style={'font-style':'italic'}),
-#         html.P("Mean Absolute Error is used to evaluate the model. MAE explains a model's performance in terms of answering how far off a prediction is on average."),
-#         html.H5("What is the size of the train and test set?", style={'font-style':'italic'}),
-#         html.P("Training data shape: (74, 5)"),
-#         html.P("Testing data shape: (25, 5)")
-#     ])
-# ])
 
 # row2 = html.Div([
 #     html.Br(),
