@@ -30,13 +30,13 @@ row1 = html.Div([
         html.H5("What feature in the dataset was used as the target?", style={'font-style':'italic'}),
         html.P("Price was used as the target variable."),
         html.H5("Is this a regression or classification problem?", style={'font-style':'italic'}),
-        html.P("This is a regression problem given that price, a continuous  is being predicted."),
+        html.P('This is a regression problem given that price, a continuous number, is being predicted. In a regression problem, we are most often predicting "How much/How many?"'),
         html.H5("How is the target distributed?", style={'font-style':'italic'}),
         html.Img(src="assets/target_distribution.PNG", className="img-fluid", width="400", height="244"),
         html.P("Looking at the plot above, we see that the target mostly follows a normal distribution."),
         html.H5("What metric is used to evaluate the performance of the model?", style={'font-style':'italic'}),
         html.P("Mean Absolute Error is used to evaluate the model. MAE explains a model's performance in terms of answering how far off a prediction is on average."),
-        html.H5("What is the size of the train and test set?", style={'font-style':'italic'}),
+        html.H5("What is the size of the training and testing set?", style={'font-style':'italic'}),
         html.P("Training data shape: (74, 5)"),
         html.P("Testing data shape: (25, 5)")
     ])
