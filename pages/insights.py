@@ -32,8 +32,11 @@ row1 = html.Div([
         html.P("Looking at the permutation importance, we see that the two most important features are style and item specifics. "),
         html.Img(src="assets/lulu_permutation_importance.PNG", className="img-fluid"),
         html.H5("Partial Dependence Plot", style={'font-style':'italic'}),
-        # html.Img(src="assets/ebay_target_distribution.PNG", className="img-fluid"),
-        html.P("Image, what it does and explanation specifc to model."),
+        html.P("A partial dependence plot shows how a variable affects a model's predictions. It is also calculated after a model has been fit."),
+        html.P("Below see what happens to the model output across different lululemon athletica Men's styles."),
+        html.Img(src="assets/lulu_partial_dependence.PNG", className="img-fluid"),
+        html.P("Second partial dependence."),
+        html.Img(src="assets/lulu_partial_dependence_2.PNG", className="img-fluid"),
         html.H5("Shapley Values Plot", style={'font-style':'italic'}),
         # html.Img(src="assets/ebay_target_distribution.PNG", className="img-fluid"),
         html.P("Image, what it does and explanation specifc to model.")
