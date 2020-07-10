@@ -26,25 +26,36 @@ row1 = html.Div([
     html.H4("Using Visualizations to Interpret Model Insights", style={'text-decoration':'underline'}),
     html.Br(),
     html.Div([
-        html.H5("Permutation Importance", style={'font-style':'italic'}),
-        html.P("Permutation importance is one way of measuring what features have the biggest impact on model predictions. It's calculated after a model has been fitted."),
-        html.P("The values toward the top are the most important features while the features toward the bottom matter least. The first number indicates how much model performance decreased with a random shuffling, and the second number measures how much performance varied from one-reshuffling to the next."),
-        html.P("Looking at the permutation importance, we see that the two most important features are style and item specifics. "),
-        html.Img(src="assets/lulu_permutation_importance.PNG", className="img-fluid"),
-        html.H5("Partial Dependence Plot", style={'font-style':'italic'}),
-        html.P("A partial dependence plot shows how a variable affects a model's predictions. Just like permutation importance, partial dependence is calculated after a model has been fit."),
-        html.P("Below see what happens to the model output across different lululemon athletica Men's styles and different item specifics."),
-        html.H6("Partial Dependence Plot (Style)"),
-        html.Img(src="assets/partial_dependence.PNG", className="img-fluid", width="700", height="454"),
-        html.Br(),
-        html.Br(),
-        html.H6("Partial Dependence Plot (Item Specifics)"),
-        html.Img(src="assets/partial_dependence_2.PNG", className="img-fluid", width="700", height="454"),
-        html.Br(),
-        html.Br(),
-        html.H5("Shapley Values Plot", style={'font-style':'italic'}),
-        # html.Img(src="assets/ebay_target_distribution.PNG", className="img-fluid"),
-        html.P("Image, what it does and explanation specifc to model.")
+        html.H5("Permutation Importance", style={'font-style':'italic', 'text-align':'center'}),
+        html.P("Permutation importance is one way of measuring what features have the biggest impact on model predictions. It's calculated after a model has been fitted.", style={'text-align':'center'}),
+        html.P("The values toward the top are the most important features while the features toward the bottom matter least. The first number indicates how much model performance decreased with a random shuffling, and the second number measures how much performance varied from one-reshuffling to the next.", style={'text-align':'center'}),
+        html.P("Looking at the permutation importance, we see that the two most important features are style and item specifics.", style={'text-align':'center'})
+    ]),
+        html.Div([
+            html.Img(src="assets/lulu_permutation_importance.PNG")], style={'text-align':'center'}),
+        html.Div([
+        html.H5("Partial Dependence Plots", style={'font-style':'italic', 'text-align':'center'}),
+        html.P("A partial dependence plot shows how a variable affects a model's predictions. Just like permutation importance, partial dependence is calculated after a model has been fit.", style={'text-align':'center'}),
+        html.P("Below see what happens to the model output across different lululemon athletica Men's styles and different item specifics.", style={'text-align':'center'}),
+        html.H6("Partial Dependence Plot (Style)", style={'text-align':'center'})
+        ]),
+            html.Div([
+                html.Img(src="assets/partial_dependence.PNG", width="700", height="454")], style={'text-align':'center'}),
+            html.Br(),
+            html.Br(),
+            html.Div([
+                html.H6("Partial Dependence Plot (Item Specifics)", style={'text-align':'center'})
+            ]),
+                html.Div([
+                    html.Img(src="assets/partial_dependence_2.PNG", width="700", height="454")], style={'text-align':'center'}),
+                html.Br(),
+                html.Br(),
+                html.Div([
+                    html.H5("Shapley Values Plots", style={'font-style':'italic', 'text-align':'center'})
+                ]),
+                    html.Div([
+                        # html.Img(src="assets/ebay_target_distribution.PNG", className="img-fluid"),
+                        html.P("Image, what it does and explanation specifc to model.", style={'text-align':'center'})
     ])
 ])
 
