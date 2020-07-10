@@ -36,7 +36,7 @@ column1 = dbc.Col(
         className='mb-3'),
         dcc.Markdown(
             """
-            ##### Interested and ready to start selling preowned Men's lululemon athletica on eBay?
+            ##### Interested and ready to start selling Men's lululemon athletica on eBay?
             """, style={'text-align':'center'},
         className='mb-4'),
         dcc.Link(dbc.Button('Get Started Here', color='primary'), href='/predictions')
