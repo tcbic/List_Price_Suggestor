@@ -18,7 +18,8 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ##### Select the features below based on the item intended for listing.
+            #### Select the features below based on the item intended for listing.
+            ###### Note: All suggestions assume an item is pre-owned and in excellent selling condition (i.e. No tears, holes, stains or pilling.).
 
             """,
         className='mb-4'),

@@ -16,43 +16,40 @@ column1 = dbc.Col(
         dcc.Markdown(className='mb-5'),
         dcc.Markdown(
             """
-            ## **The specifc styles within a given brand mean something.**
-            """,
+            ### **It's often not easy to gauge how much an item is worth, and price can be the difference between selling an item or not.**
+            """, style={'text-align':'center'}
         ), 
+        # dcc.Markdown(
+        #     """
+        #     ##### This makes recommendation tools a helpful guide.
+        #     """, style={'text-align':'center'}
+        # ),
         dcc.Markdown(
             """
-            #### Not just in terms of looks, but also sales price.
-            """,
-        ),
-        dcc.Markdown(
-            """
-            ##### lululemon athletica has become a mainstream athletic apparel brand.
-            """,
-        className='mb-3'),
-        dcc.Markdown(
-            """
-            ##### This app aims to offer list price suggestions for some of their most popular men's styles.
+            * ##### Selling online is becoming more and more common practice.
             """,
         className='mb-3'),
         dcc.Markdown(
             """
-            ##### All list price suggestions assume that the item is in excellent pre-owned condition and will be sold on eBay.
+            * ##### lululemon athletica has been one of the top selling brands on the thisjourneybus eBay store. To the right, you can see the most popular lululemon Men's styles sold.
             """,
+        className='mb-3'),
+        dcc.Markdown(
+            """
+            ##### Interested and ready to start selling preowned Men's lululemon athletica on eBay?
+            """, style={'text-align':'center'},
         className='mb-4'),
-        dcc.Link(dbc.Button('Get Started Here', color='success'), href='/predictions')
-    ],
-    align="center",
+        dcc.Link(dbc.Button('Get Started Here', color='primary'), href='/predictions')
+    ], style={'text-align':'center'},
+    width=4,
 )
 
-# gapminder = px.data.gapminder()
-# fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
-#            hover_name="country", log_x=True, size_max=60)
+column2 = html.Div([
+    html.Br(),
+    html.Br(),
+    html.Br(),
+    html.Br(),
+    html.Br(),
+    html.Img(src="assets/mens_top_styles.PNG", width="700", height="330")], style={'text-align':'center'})    
 
-# column2 = dbc.Col(
-#     [
-#         dcc.Graph(figure=fig),
-#     ]
-# )
-
-layout = dbc.Row([column1])
-# layout = dbc.Row([column1, column2])
+layout = dbc.Row([column1, column2])

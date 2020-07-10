@@ -34,11 +34,12 @@ row1 = html.Div([
         html.Div([
             html.Img(src="assets/lulu_permutation_importance.PNG")], style={'text-align':'center'}),
         html.Div([
+        html.Br(),
         html.H4("Partial Dependence Plots", style={'font-style':'italic', 'text-align':'center'}),
         html.P("A partial dependence plot shows how a variable affects a model's predictions. Just like permutation importance, partial dependence is calculated after a model has been fit.", style={'text-align':'center'}),
         html.P("Below we see how the model output across different lululemon athletica Men's styles and varying item specifics for an item is affected.", style={'text-align':'center'}),
         html.Br(),
-        html.H6("Partial Dependence Plot (Style)", style={'font-style':'italic', 'text-align':'center'})
+        html.H6("Partial Dependence Plot (Style)", style={'text-decoration':'underline', 'text-align':'center'})
         ]),
             html.Div([
                 html.Img(src="assets/partial_dependence.PNG", width="700", height="454")], style={'text-align':'center'}),
@@ -49,7 +50,7 @@ row1 = html.Div([
                 html.Br(),
                 html.Br(),
                 html.Div([
-                    html.H6("Partial Dependence Plot (Item Specifics)", style={'font-style':'italic', 'text-align':'center'})
+                    html.H6("Partial Dependence Plot (Item Specifics)", style={'text-decoration':'underline', 'text-align':'center'})
                 ]),
                     html.Div([
                         html.Img(src="assets/partial_dependence_2.PNG", width="700", height="454")], style={'text-align':'center'}),
@@ -57,6 +58,7 @@ row1 = html.Div([
                         html.Br(),
                         html.H6("We see that a long sleeve item has the highest positive impact on price and that a sleeveless item has the highest negative impact on price.", style={'text-align':'center'})
                     ]),
+                        html.Br(),
                         html.Br(),
                         html.Div([
                             html.H4("Shapley Values Plot", style={'font-style':'italic', 'text-align':'center'}),
