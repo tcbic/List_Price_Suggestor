@@ -15,13 +15,14 @@ from app import app
 # https://dash-bootstrap-components.opensource.faculty.ai/l/components/layout
 column1 = dbc.Col(
     [
+        html.Br(),
         dcc.Markdown(
             """
         
             #### Select the features below based on the item intended for listing.
             ###### Note: All suggestions assume an item is pre-owned and in excellent selling condition (i.e. No tears, holes, stains or pilling.).
 
-            """,
+            """, style={'text-align':'center'},
         className='mb-4'),
         dcc.Markdown('##### ** Size **'),
         dcc.RadioItems(
@@ -34,7 +35,7 @@ column1 = dbc.Col(
                 {'label': 'XXL', 'value': 5}
             ],
             value=1,
-            labelStyle = {'margin-right': '20px'},
+            labelStyle = {'margin-right': '25px'},
             className='mb-3',
         ),        
         dcc.Markdown('##### ** Style **'),
@@ -75,10 +76,10 @@ column1 = dbc.Col(
                 {'label': 'Spring', 'value': 3}
             ],
             value=1,
-            labelStyle = {'margin-right': '20px'},
+            labelStyle = {'margin-right': '25px'},
             className='mb-3',
         ),
-        dcc.Markdown('##### ** The suggested list price is: **', className='mb-2'), html.Div( id='prediction-content')
+        dcc.Markdown('##### ** The suggested list price is: **', className='mb-2', style={'text-align':'center'}), html.Div( id='prediction-content', style={'text-align':'center'})
     ],
 )
 

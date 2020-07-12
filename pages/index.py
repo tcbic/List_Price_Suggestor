@@ -16,9 +16,10 @@ column1 = dbc.Col(
         dcc.Markdown(className='mb-5'),
         dcc.Markdown(
             """
-            ### **It's often not easy to gauge how much an item is worth, and price can be the difference as to whether an item sells or not.**
+            ### **It's often not easy to gauge how much an item is worth, and list price can be the difference as to whether an item sells or not.**
             """, style={'text-align':'center'}
         ), 
+        html.Br(),
         # dcc.Markdown(
         #     """
         #     ##### This makes recommendation tools a helpful guide.
@@ -31,7 +32,7 @@ column1 = dbc.Col(
         # className='mb-3'),
         dcc.Markdown(
             """
-            ##### lululemon athletica has been one of the top selling brands on the thisjourneybus eBay store. To the right, you can see the most popular lululemon Men's styles sold.
+            ##### lululemon athletica has been one of the top selling brands on the thisjourneybus eBay store. To the right, you see the most popular lululemon Men's styles sold.
             """, style={'text-align':'center'},
         className='mb-3'),
         dcc.Markdown(
@@ -42,15 +43,13 @@ column1 = dbc.Col(
         html.Br(),
         dcc.Link(dbc.Button('Get Started Here', color='primary'), href='/predictions')
     ], style={'text-align':'center'},
-    width=4,
+    width=6,
 )
 
 column2 = html.Div([
     html.Br(),
     html.Br(),
     html.Br(),
-    html.Br(),
-    html.Br(),
-    html.Img(src="assets/mens_top_styles.PNG", width="700", height="330")], style={'text-align':'center'})    
+    html.Img(src="assets/mens_top_styles.PNG", width="565", height="266")])    
 
 layout = dbc.Row([column1, column2])
