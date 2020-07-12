@@ -16,7 +16,7 @@ column1 = dbc.Col(
         dcc.Markdown(className='mb-5'),
         dcc.Markdown(
             """
-            ### **It's often not easy to gauge how much an item is worth, and price can be the difference between selling an item or not.**
+            ### **It's often not easy to gauge how much an item is worth, and price can be the difference as to whether an item sells or not.**
             """, style={'text-align':'center'}
         ), 
         # dcc.Markdown(
@@ -24,21 +24,22 @@ column1 = dbc.Col(
         #     ##### This makes recommendation tools a helpful guide.
         #     """, style={'text-align':'center'}
         # ),
+        # dcc.Markdown(
+        #     """
+        #     ##### Selling online is becoming more and more common practice.
+        #     """,
+        # className='mb-3'),
         dcc.Markdown(
             """
-            * ##### Selling online is becoming more and more common practice.
-            """,
+            ##### lululemon athletica has been one of the top selling brands on the thisjourneybus eBay store. To the right, you can see the most popular lululemon Men's styles sold.
+            """, style={'text-align':'center'},
         className='mb-3'),
         dcc.Markdown(
             """
-            * ##### lululemon athletica has been one of the top selling brands on the thisjourneybus eBay store. To the right, you can see the most popular lululemon Men's styles sold.
-            """,
-        className='mb-3'),
-        dcc.Markdown(
-            """
-            ##### Interested and ready to start selling Men's lululemon athletica on eBay?
+            ##### Interested and ready to sell Men's lululemon athletica on eBay?
             """, style={'text-align':'center'},
         className='mb-4'),
+        html.Br(),
         dcc.Link(dbc.Button('Get Started Here', color='primary'), href='/predictions')
     ], style={'text-align':'center'},
     width=4,
