@@ -53,7 +53,7 @@ row2 = html.Div([
         html.P("The dataset used for modeling is data collected from the thisjourneybus eBay store. It includes sales from Summer (June) 2017 to Summer (June) 2018.", style={'text-align':'center'}),
         html.H5("Data Cleaning", style={'text-align':'center'}),
         html.P("A subset of the dataset was created to include only pre-owned Men's lululemon athletica branded items that sold under a fixed listing format.", style={'text-align':'center'}),
-        html.H5("Data Engineering", style={'text-align':'center'}),
+        html.H5("Feature Engineering", style={'text-align':'center'}),
         html.P("The original dataset included a sale date feature. I chose to engineer a feature from sale date for the purpose of categorizing items based on the season in which they sold. Each item fell into one of the four seasons, Summer, Fall, Winter or Spring.", style={'text-align':'center'}),
         html.Br(),
         html.H6("The features in this table are the final features included to train the model:", style={'text-align':'center'}),
